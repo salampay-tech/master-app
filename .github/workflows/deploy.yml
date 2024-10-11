@@ -23,7 +23,7 @@ jobs:
       # Step 3: Deploy the code to EC2
       - name: Deploy to EC2
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@ip-172-31-15-76 "
+          ssh -o StrictHostKeyChecking=no ubuntu@43.216.202.166 "
             cd /home/ubuntu &&
             git pull &&
             npm install &&
