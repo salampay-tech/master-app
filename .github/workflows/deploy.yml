@@ -25,11 +25,11 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@43.216.202.166 "sudo chown -R ubuntu:ubuntu /home/ubuntu/master-app"
 
-      # Step 4: Deploy the code to EC2
       - name: Deploy to EC2
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@43.216.202.166 "
+          ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ubuntu@43.216.202.166 "
             cd /home/ubuntu/master-app &&
             git pull &&
             npm install &&
             pm2 restart all"
+
