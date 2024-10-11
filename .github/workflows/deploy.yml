@@ -24,7 +24,7 @@ jobs:
       - name: Deploy to EC2
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@43.216.202.166 "
-            cd /home/ubuntu/master-app &&
+            cd /home/ubuntu &&
             git pull &&
             npm install &&
             pm2 restart all"
